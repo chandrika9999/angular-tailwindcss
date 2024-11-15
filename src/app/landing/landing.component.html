@@ -1,0 +1,97 @@
+
+<nav class="px-6 py-4 bg-purple-800 text-white flex justify-between items-center shadow-md">
+    <img src="https://png.pngtree.com/template/20190316/ourmid/pngtree-insurance-logo-vector-image_80257.jpg" alt="Logo" class="h-10">
+    <ul class="flex space-x-6 ">
+      <li *ngFor="let link of navLinks">
+        <a [href]="link.href" class="hover:bg-purple-300 text-white  px-4 py-2 rounded">{{ link.label }}</a>
+      </li>
+      <li>
+        <button class="bg-purple-600 px-4 py-2 rounded text-white  hover:bg-purple-300 transition-colors duration-300">Contact Us</button>
+      </li>
+    </ul>
+  </nav>
+  
+
+  <main class="flex flex-col md:flex-row justify-between items-center bg-gradient-to-r from-purple-500 to-purple-700 text-white py-20 px-8">
+    <div class="md:w-1/2 space-y-6 text-center md:text-left">
+      <h1 class="text-4xl md:text-5xl font-extrabold">{{ heroContent.title }}</h1>
+      <p class="text-lg md:text-xl">{{ heroContent.subtitle }}</p>
+      <div class="flex justify-center md:justify-start space-x-4 mt-4">
+        <button class="bg-white text-purple-700 px-6 py-2 rounded hover:bg-gray-100 transition-colors duration-300">{{ heroContent.buttonText1 }}</button>
+        <button class="bg-transparent border-2 border-white px-6 py-2 rounded hover:bg-purple-600 transition-colors duration-300">{{ heroContent.buttonText2 }}</button>
+      </div>
+    </div>
+    <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center md:justify-end">
+      <img [src]="heroContent.imageUrl" alt="Hero Image" class="h-64 md:h-96 rounded-lg shadow-lg">
+    </div>
+  </main>
+ 
+  <section class="py-16 bg-gray-100">
+    <h2 class="text-center text-3xl font-bold text-purple-700">Our Features</h2>
+    <p class="text-center text-xl text-gray-700 mt-4">Explore the benefits of choosing our services</p>
+    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto p-6">
+      <div *ngFor="let feature of features" class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow duration-300">
+        
+        <h3 class="text-xl font-semibold text-purple-700">{{ feature.title }}</h3>
+        <p class="text-gray-600 mt-2">{{ feature.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 px-6">
+      
+      <div class="md:w-1/2 space-y-8">
+        <h2 class="text-4xl font-extrabold text-gray-800">Life Insurance That Creates Wealth For Everyone</h2>
+        <p class="text-lg text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis placerat arcu nibh sed.</p>
+  
+    
+        <div class="space-y-6">
+          <div *ngFor="let feature of featureDetails" class="flex items-start p-4 bg-white shadow-lg rounded-lg">
+            
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800">{{ feature.title }}</h3>
+              <p class="text-gray-600">{{ feature.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    
+      <div class="md:w-1/2 grid grid-cols-1 gap-4">
+        <img *ngFor="let image of featureImages" [src]="image" alt="Feature Image" class="w-full h-40 rounded-lg object-cover shadow-md">
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-purple-800 text-white py-10">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="font-bold text-lg">Contact Us</h4>
+        <p class="mt-4"><strong>Location:</strong> {{ footerContent.location }}</p>
+        <p class="mt-2"><strong>Contact:</strong> {{ footerContent.contact }}</p>
+        <p class="mt-2"><strong>Email:</strong> {{ footerContent.email }}</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-lg">Quick Links</h4>
+        <ul class="mt-4 space-y-2">
+          <li><a href="#" class="hover:text-purple-300">About Us</a></li>
+          <li><a href="#" class="hover:text-purple-300">Services</a></li>
+          <li><a href="#" class="hover:text-purple-300">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-purple-300">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-lg">Follow Us</h4>
+        <div class="flex space-x-4 mt-4">
+          <a href="#" class="h-8 w-8 bg-white text-purple-800 rounded-full flex items-center justify-center hover:bg-purple-300">
+            <img src="https://www.guvi.in/assets/DpDJVw-s-facebook.webp" alt="Facebook" class="h-5 w-5">
+          </a>
+          <a href="#" class="h-8 w-8 bg-white text-purple-800 rounded-full flex items-center justify-center hover:bg-purple-300">
+            <img src="https://www.guvi.in/assets/CgqVvrZ9-instagram.webp" alt="Instagram" class="h-5 w-5">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
